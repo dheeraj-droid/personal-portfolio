@@ -30,6 +30,8 @@ Download or clone this repository, then open `index.html` in a browser.
 
 ## Testing checklist
 
+The student completed the manual checks and confirmed that the results were satisfactory.
+
 1. Click each navigation link and check the destination.
 2. Click Welcome and check the welcome message.
 3. Switch to dark theme and back to light theme.

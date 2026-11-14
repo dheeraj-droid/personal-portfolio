@@ -25,7 +25,7 @@ The following are polished examples that summarize the requests made during deve
 
 AI assisted in developing the HTML, CSS, and JavaScript. The code and suggestions were reviewed and refined during development to match the requested design and assignment requirements. For example, the earlier, more elaborate design was replaced with a simpler layout, and decorative elements and saved theme preferences were removed.
 
-Codex inspected the code and performed the checks described below. The student should also review the final code and complete the manual browser checklist before submission.
+Codex inspected the code and performed the automated checks described below. The student also completed the manual checks and confirmed that the results were satisfactory.
 
 ## Issues and corrections
 
@@ -35,4 +35,4 @@ The initial design was more elaborate than requested, so it was simplified. An u
 
 Codex checked JavaScript syntax and used automated Playwright tests in Microsoft Edge to verify navigation, the welcome message, all three greeting branches, theme switching, form validation, repeated submissions, keyboard focus, and the absence of horizontal overflow at mobile, tablet, and desktop widths. The footer and button hover visibility in both themes were also checked. Screenshots were reviewed locally.
 
-The assignment also requires manual browser testing. The manual checklist is in the README and should be completed and documented by the student before submission. Project details were taken from the supplied resume; the portfolio does not independently verify project performance claims.
+The student completed the manual browser checks and confirmed that everything worked as expected. The checklist is included in the README. Project details were taken from the supplied resume; the portfolio does not independently verify project performance claims.
