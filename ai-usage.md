@@ -44,3 +44,7 @@ The user requested more style through colors and layout without extra components
 ## Monochrome revision
 
 The user requested a minimal black-and-white design without boxes and asked about tablet and mobile layouts. Codex replaced the colored backgrounds, skill badges, and project card borders with open sections, text rows, and thin dividers. The required dark theme reverses black and white. Existing content and JavaScript were retained. Browser checks were repeated at mobile, tablet, and desktop widths, including 820px and 1024px tablet layouts.
+
+## Content and navigation update
+
+At the user?s request, Codex added two more resume projects, updated the skills list, included technology names in the project descriptions, added current-section navigation, and changed the required-field indicators and Welcome button styling.

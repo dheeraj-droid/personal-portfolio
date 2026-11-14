@@ -29,6 +29,52 @@ function showGreeting() {
 
 showGreeting();
 
+// Keep the underline on the section the visitor is viewing.
+const navigationLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("main section[id]");
+let currentSection = "home";
+
+function setCurrentSection(id) {
+  currentSection = id;
+  navigationLinks.forEach(function (link) {
+    if (link.getAttribute("href") === "#" + id) {
+      link.setAttribute("aria-current", "location");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+navigationLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    setCurrentSection(link.getAttribute("href").slice(1));
+  });
+});
+
+function updateCurrentSection() {
+  let closestTop = -Infinity;
+  let matches = [];
+  sections.forEach(function (section) {
+    const top = section.getBoundingClientRect().top;
+    if (top <= window.innerHeight * 0.4) {
+      if (top > closestTop + 1) {
+        closestTop = top;
+        matches = [section.id];
+      } else if (Math.abs(top - closestTop) <= 1) {
+        matches.push(section.id);
+      }
+    }
+  });
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+    setCurrentSection("contact");
+  } else if (matches.length > 0 && !matches.includes(currentSection)) {
+    setCurrentSection(matches[0]);
+  }
+}
+
+window.addEventListener("scroll", updateCurrentSection);
+updateCurrentSection();
+
 document.getElementById("welcome-button").addEventListener("click", function () {
   document.getElementById("welcome-message").textContent =
     "Welcome! Thank you for visiting my portfolio.";

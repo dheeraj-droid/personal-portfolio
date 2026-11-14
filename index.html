@@ -13,7 +13,7 @@
       <h1>Badveli Dheeraj Reddy</h1>
       <p>Software Engineer</p>
       <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
+        <a href="#home" aria-current="location">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -46,10 +46,11 @@
       <h2>My Skills</h2>
       <ul class="skills-list">
         <li>Python</li>
+        <li>C</li>
         <li>C++</li>
         <li>SQL</li>
-        <li>Microsoft Azure</li>
-        <li>Git and GitHub</li>
+        <li>PyTorch</li>
+        <li>TensorFlow</li>
       </ul>
     </section>
 
@@ -58,14 +59,22 @@
       <div class="project-list">
         <article class="project-card">
           <h3>AI Sudoku Solver</h3>
-          <p>A program that reads a Sudoku puzzle from an image, identifies the digits, and solves the puzzle using backtracking.</p>
-          <p><strong>Technologies:</strong> Python, OpenCV, Backtracking</p>
+          <p>Built with Python and OpenCV, this program reads a Sudoku puzzle from an image, identifies the digits, and solves it using backtracking.</p>
           <p class="placeholder">Project link coming soon</p>
         </article>
         <article class="project-card">
           <h3>Virtual Memory Simulator</h3>
-          <p>A simulator that compares page replacement methods and tracks page faults and memory usage across multiple processes.</p>
-          <p><strong>Technologies:</strong> C++, Page Replacement, Memory Management</p>
+          <p>A C++ simulator that compares page replacement methods and tracks page faults and memory usage across multiple processes.</p>
+          <p class="placeholder">Project link coming soon</p>
+        </article>
+        <article class="project-card">
+          <h3>DevilutionX</h3>
+          <p>Contributed a GitHub Actions workflow fix and authored a privacy option for this open-source C++ game engine.</p>
+          <p class="placeholder">Project link coming soon</p>
+        </article>
+        <article class="project-card">
+          <h3>SuperStain YOLO</h3>
+          <p>A Python and PyTorch framework combining YOLO segmentation and super-resolution for histological stain image analysis.</p>
           <p class="placeholder">Project link coming soon</p>
         </article>
       </div>
@@ -74,19 +83,19 @@
     <section id="contact">
       <div class="contact-intro">
         <h2>Contact Me</h2>
-          <p>Email: <a href="mailto:dheerajreddy035@gmail.com">dheerajreddy035@gmail.com</a></p>
+        <p>Email: <a href="mailto:dheerajreddy035@gmail.com">dheerajreddy035@gmail.com</a></p>
         <p>This form is a demonstration. It validates your details but does not send a message.</p>
       </div>
       <form id="contact-form" novalidate>
-        <label for="full-name">Full Name (required)</label>
+        <label for="full-name">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
         <input id="full-name" name="fullName" type="text" autocomplete="name" required aria-describedby="name-error">
         <p class="error" id="name-error"></p>
 
-        <label for="email">Email Address (required)</label>
+        <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
         <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
         <p class="error" id="email-error"></p>
 
-        <label for="message">Message (required)</label>
+        <label for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
         <textarea id="message" name="message" rows="4" required aria-describedby="message-error"></textarea>
         <p class="error" id="message-error"></p>
 

@@ -73,7 +73,7 @@ nav a {
   text-underline-offset: 6px;
 }
 
-nav a:hover, nav a:focus-visible {
+nav a:hover, nav a:focus-visible, nav a[aria-current="location"] {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -104,7 +104,7 @@ button:hover, .button:hover {
   text-decoration: none;
 }
 
-#theme-toggle, #welcome-button {
+#theme-toggle {
   padding: 12px 0;
   border: 0;
   border-bottom: 1px solid currentColor;
@@ -113,7 +113,7 @@ button:hover, .button:hover {
   font-weight: 400;
 }
 
-#theme-toggle:hover, #welcome-button:hover {
+#theme-toggle:hover {
   border-bottom-width: 3px;
   padding-bottom: 10px;
 }
@@ -175,7 +175,7 @@ p {
 }
 
 #home h2 {
-  max-width: 800px;
+  max-width: 100%;
   font-size: 76px;
   font-weight: 500;
   letter-spacing: -0.035em;
@@ -203,6 +203,17 @@ p {
 
 #home .button {
   margin: 14px 28px 0 0;
+}
+
+#welcome-button {
+  color: inherit;
+  background-color: transparent;
+  border-color: currentColor;
+}
+
+#welcome-button:hover {
+  color: #ffffff;
+  background-color: #000000;
 }
 
 #welcome-message {
@@ -283,6 +294,9 @@ label {
   font-size: 13px;
 }
 
+.required-mark { color: #b00020; }
+.dark-theme .required-mark { color: #ff8f9c; }
+
 input, textarea {
   width: 100%;
   padding: 10px 0;
@@ -352,10 +366,13 @@ body.dark-theme {
   border-color: #ffffff;
 }
 
-.dark-theme #theme-toggle, .dark-theme #welcome-button {
+.dark-theme #theme-toggle {
   color: #ffffff;
   background-color: transparent;
 }
+
+.dark-theme #welcome-button { color: #ffffff; background-color: transparent; }
+.dark-theme #welcome-button:hover { color: #000000; background-color: #ffffff; }
 
 .dark-theme button:focus-visible, .dark-theme .button:focus-visible {
   outline-color: #ffffff;
