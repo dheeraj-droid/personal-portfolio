@@ -29,10 +29,10 @@ I also completed the manual browser checks and found the results satisfactory. C
 
 ## Issues and corrections
 
-The initial design was more elaborate than requested, so it was simplified. An unnecessary empty CSS import was removed. During the final audit, a button hover style that could blend into the background was corrected, redundant CSS was removed, and an outdated comment was updated.
+During my manual testing, I identified issues including the main heading wrapping despite available space and the navigation not clearly indicating the current section. I reported these issues and requested corrections. I also reviewed the design and requested a simpler layout. During a later code audit, an unnecessary CSS import, a button hover visibility issue, redundant CSS, and an outdated comment were identified and corrected with AI assistance.
 
 ## Testing and verification
 
-Codex checked JavaScript syntax and used automated Playwright tests in Microsoft Edge to verify navigation, the welcome message, all three greeting branches, theme switching, form validation, repeated submissions, keyboard focus, and the absence of horizontal overflow at mobile, tablet, and desktop widths. The footer and button hover visibility in both themes were also checked. Screenshots were reviewed locally.
+I manually tested the website, identified issues, reported them, and checked the changes. My checks included the layout, navigation, theme switch, welcome interaction, greeting, and contact form. I confirmed that the final results were satisfactory; the checklist is included in the README.
 
-I completed the manual browser checks and confirmed that everything worked as expected. The checklist is included in the README. Project details were taken from the supplied resume; the portfolio does not independently verify project performance claims.
+As an additional check, Codex used automated Playwright tests in Microsoft Edge to verify navigation, greeting branches, theme switching, form validation, repeated submissions, keyboard focus, and responsive widths. Codex also checked JavaScript syntax and button hover visibility. Project details were taken from my resume; the portfolio does not independently verify project performance claims.
