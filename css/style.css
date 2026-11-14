@@ -229,7 +229,10 @@ p {
 }
 
 .skills-list li + li {
-  border-top: 1px solid currentColor;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 55% 1px;
 }
 
 /* Projects are open text rows rather than boxed cards. */
