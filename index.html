@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Badveli Dheeraj Reddy — Software Engineer at MAQ Software. Explore projects in AI, computer vision, systems, and open source.">
+  <meta name="color-scheme" content="light dark">
+  <title>Dheeraj Reddy · Software Engineer</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#home" aria-label="Dheeraj Reddy home">dr<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
+        <span aria-hidden="true" id="theme-icon">◐</span><span id="theme-label">Dark</span>
+      </button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SOFTWARE ENGINEER · NOIDA, INDIA</p>
+        <p class="greeting" id="greeting">Hello, welcome to my corner of the web.</p>
+        <h1 id="hero-title">Hi, I’m Dheeraj.<br>I turn ideas into<br><span>working software.</span></h1>
+        <p class="hero-description">From AI agents to the systems behind them. I’m Badveli Dheeraj Reddy, a software engineer at MAQ Software and a Computer Science graduate from IIT Dharwad.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <button class="button button-secondary" id="welcome-button" type="button" hidden>Say hello <span aria-hidden="true">✦</span></button>
+        </div>
+        <p class="welcome-message" id="welcome-message" role="status"></p>
+        <div class="social-links"><a href="https://github.com/dheeraj-droid">GitHub ↗</a><a href="https://www.linkedin.com/in/badveli-dheeraj-reddy-915a84277/">LinkedIn ↗</a><a href="mailto:dheerajreddy035@gmail.com">Email ↗</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-grid"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-label label-top">IDEA → IMPLEMENTATION</div>
+        <div class="code-window">
+          <div class="window-bar"><span></span><span></span><span></span><small>developer.py</small></div>
+          <div class="code-content"><span class="code-muted"># A little about me</span><br><span class="code-purple">class</span> <span class="code-yellow">Engineer</span>:<br><br>&nbsp; name = <span class="code-green">"Dheeraj"</span><br>&nbsp; focus = [<br>&nbsp;&nbsp;&nbsp; <span class="code-green">"AI &amp; backend"</span>,<br>&nbsp;&nbsp;&nbsp; <span class="code-green">"Systems"</span>,<br>&nbsp;&nbsp;&nbsp; <span class="code-green">"Open source"</span><br>&nbsp; ]<br><br>&nbsp; <span class="code-purple">def</span> <span class="code-yellow">build</span>(self):<br>&nbsp;&nbsp;&nbsp; <span class="code-purple">return</span> ideas.to_reality()</div>
+        </div>
+        <div class="art-badge"><span>⌘</span><div>Built with curiosity<small>Grounded in fundamentals.</small></div></div>
+        <div class="art-label label-bottom">&lt; KEEP BUILDING /&gt;</div>
+      </div>
+      <div class="hero-bottom"><span>AI &amp; BACKEND <b> / </b> SYSTEMS <b> / </b> OPEN SOURCE</span><a href="#about">A little more about me <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div><p class="eyebrow">01 / ABOUT</p><h2 id="about-title">Curious by nature.<br>Engineer by training.</h2></div>
+        <div class="about-copy"><p>I build software across AI, backend services, and systems. At MAQ Software, I work on enterprise AI agents and the services that connect them to business workflows.</p><p>My work spans retrieval-augmented generation, computer vision, and memory management. I also contribute to open source, including the DevilutionX game engine.</p>
+          <div class="education"><span class="small-label">EDUCATION</span><h3>Indian Institute of Technology Dharwad</h3><p>B.Tech · Computer Science &amp; Engineering</p><div class="education-meta"><span>2022–2026</span><span>CGPA <strong>8.84</strong></span></div></div>
+          <p class="achievement"><span aria-hidden="true">✦</span> JEE Advanced 2022 rank: 4,520 · NTSE 2021 qualifier</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="projects-title">Things I’ve worked on.</h2></div><p>A mix of intelligent applications,<br>systems, and open-source contributions.</p></div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-visual visual-engine" aria-hidden="true"><span class="visual-kicker">OPEN SOURCE / GAME ENGINE</span><div class="engine-mark">&lt;<span>D</span>/&gt;</div><span class="visual-caption">DEVILUTION<span>X</span></span><span class="project-number">01</span></div>
+          <div class="project-body"><p class="small-label">OPEN-SOURCE CONTRIBUTION</p><h3>DevilutionX</h3><p>Contributed to the C++ reimplementation of Diablo 1. Merged a CI fix for translation builds and authored a streamer privacy option for the in-game automap.</p><ul class="tags" aria-label="Technologies"><li>C++</li><li>GitHub Actions</li><li>CI/CD</li></ul><span class="project-placeholder">Project link coming soon <span aria-hidden="true">↗</span></span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-visual visual-sudoku" aria-hidden="true"><span class="visual-kicker">COMPUTER VISION / PUZZLE SOLVING</span><div class="sudoku-grid"><span>5</span><span>3</span><span class="solved">4</span><span>6</span><span class="solved">7</span><span>2</span><span class="solved">1</span><span>9</span><span>8</span></div><span class="visual-caption">SEE. RECOGNIZE. SOLVE.</span><span class="project-number">02</span></div>
+          <div class="project-body"><p class="small-label">COMPUTER VISION</p><h3>AI Sudoku Solver</h3><p>An image-to-solution pipeline that detects Sudoku grids, recognizes digits, and solves puzzles with backtracking. Reached 95% digit recognition accuracy across 100+ test puzzles.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>OpenCV</li><li>Backtracking</li></ul><span class="project-placeholder">Project link coming soon <span aria-hidden="true">↗</span></span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-visual visual-memory" aria-hidden="true"><span class="visual-kicker">SYSTEMS / MEMORY MANAGEMENT</span><div class="memory-diagram"><div><span>P₁</span><span>P₂</span><span>P₃</span><span>P₄</span></div><b>→</b><div class="memory-blocks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><span class="visual-caption">VIRTUAL → PHYSICAL</span><span class="project-number">03</span></div>
+          <div class="project-body"><p class="small-label">SYSTEMS PROGRAMMING</p><h3>Virtual Memory Simulator</h3><p>A configurable simulator comparing LRU and random page replacement across four concurrent processes, with local and global allocation, page-fault tracking, and frame utilization.</p><ul class="tags" aria-label="Technologies"><li>C++</li><li>Page replacement</li><li>Memory management</li></ul><span class="project-placeholder">Project link coming soon <span aria-hidden="true">↗</span></span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-visual visual-yolo" aria-hidden="true"><span class="visual-kicker">DEEP LEARNING / SEGMENTATION</span><div class="cell cell-one"></div><div class="cell cell-two"></div><div class="cell cell-three"></div><div class="detection-box"><span>tissue boundary</span></div><span class="visual-caption">SUPERSTAIN / YOLO</span><span class="project-number">04</span></div>
+          <div class="project-body"><p class="small-label">DEEP LEARNING</p><h3>SuperStain YOLO</h3><p>A framework combining YOLO segmentation and super-resolution for histological stain images. Improved segmentation accuracy by 15% and achieved 92% average precision.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>YOLO</li></ul><span class="project-placeholder">Project link coming soon <span aria-hidden="true">↗</span></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title"><div class="container experience-grid">
+      <div><p class="eyebrow">03 / EXPERIENCE</p><h2 id="experience-title">Putting ideas<br>into practice.</h2></div>
+      <article class="experience"><div class="job-heading"><div><h3>Software Engineer</h3><p>MAQ Software · Noida, Uttar Pradesh</p></div><span class="date-pill">Aug 2026 — Present</span></div><ul><li>Build enterprise AI agents using Python, retrieval-augmented generation, and vector databases.</li><li>Develop FastAPI services with deterministic validation and routing for reliable outputs.</li><li>Deploy applications on Azure and build data solutions with Microsoft Fabric and Azure SQL Database.</li><li>Connect agents to business workflows with Copilot Studio, Power Automate, Power BI, and Azure DevOps.</li></ul></article>
+    </div></section>
+
+    <section class="section container" id="skills" aria-labelledby="skills-title"><div class="section-heading"><div><p class="eyebrow">04 / TOOLKIT</p><h2 id="skills-title">The tools behind the work.</h2></div><p>Solid fundamentals.<br>A practical, evolving toolkit.</p></div>
+      <div class="skills-grid">
+        <article class="skill-group"><span class="skill-symbol" aria-hidden="true">&lt;/&gt;</span><h3>Languages</h3><ul><li>Python</li><li>C &amp; C++</li><li>SQL</li></ul></article>
+        <article class="skill-group"><span class="skill-symbol" aria-hidden="true">✳</span><h3>AI &amp; backend</h3><ul><li>PyTorch &amp; TensorFlow</li><li>FastAPI &amp; REST APIs</li><li>RAG &amp; vector databases</li></ul></article>
+        <article class="skill-group"><span class="skill-symbol" aria-hidden="true">☁</span><h3>Cloud &amp; data</h3><ul><li>Microsoft Azure</li><li>Microsoft Fabric</li><li>Azure SQL Database</li></ul></article>
+        <article class="skill-group"><span class="skill-symbol" aria-hidden="true">⌘</span><h3>Tools &amp; foundations</h3><ul><li>Git / GitHub &amp; Azure DevOps</li><li>Linux / Ubuntu</li><li>Algorithms, OS &amp; DBMS</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid">
+      <div><p class="eyebrow">05 / GET IN TOUCH</p><h2 id="contact-title">Good things start<br>with a conversation<span>.</span></h2><p>Have a project in mind, a question, or just want to connect? I’d love to hear from you.</p><a class="contact-email" href="mailto:dheerajreddy035@gmail.com">dheerajreddy035@gmail.com <span aria-hidden="true">↗</span></a><div class="social-links"><a href="https://github.com/dheeraj-droid">GitHub ↗</a><a href="https://www.linkedin.com/in/badveli-dheeraj-reddy-915a84277/">LinkedIn ↗</a></div></div>
+      <form id="contact-form" novalidate>
+        <p class="form-note" id="form-note">This demo validates your message locally. To reach me, use the email link.</p>
+        <div class="form-field"><label for="full-name">Full name <span>(required)</span></label><input id="full-name" name="fullName" autocomplete="name" required maxlength="120" placeholder="Your name" aria-describedby="name-error"><p class="field-error" id="name-error"></p></div>
+        <div class="form-field"><label for="email">Email address <span>(required)</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" aria-describedby="email-error"><p class="field-error" id="email-error"></p></div>
+        <div class="form-field"><label for="message">Message <span>(required)</span></label><textarea id="message" name="message" rows="4" required maxlength="5000" placeholder="What would you like to talk about?" aria-describedby="message-error"></textarea><p class="field-error" id="message-error"></p></div>
+        <button class="button button-primary submit-button" id="submit-button" type="submit" disabled>Validate message <span aria-hidden="true">↗</span></button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p>Enable JavaScript to try this form, or use the email link to contact me.</p></noscript>
+      </form>
+    </div></section>
+  </main>
+  <footer class="container site-footer"><a class="wordmark" href="#home" aria-label="Back to home">dr<span>.</span></a><p>© <span id="year">2026</span> Badveli Dheeraj Reddy</p><p>Built with HTML, CSS &amp; curiosity.</p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
