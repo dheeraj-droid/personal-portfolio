@@ -1,153 +1,90 @@
-"use strict";
+// Switch between light and dark themes.
+const themeButton = document.getElementById("theme-toggle");
 
-const root = document.documentElement;
-const themeToggle = document.querySelector("#theme-toggle");
-const themeLabel = document.querySelector("#theme-label");
-const themeIcon = document.querySelector("#theme-icon");
-const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-let chosenTheme = null;
+themeButton.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  const isDark = document.body.classList.contains("dark-theme");
+  themeButton.setAttribute("aria-pressed", isDark);
 
-// Storage may be unavailable in private or restricted browser contexts.
-try {
-  const savedTheme = localStorage.getItem("portfolio-theme");
-  if (savedTheme === "light" || savedTheme === "dark") chosenTheme = savedTheme;
-} catch {
-  /* Theme switching still works for this visit. */
-}
-
-function applyTheme(theme) {
-  const isDark = theme === "dark";
-  root.dataset.theme = theme;
-  themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.setAttribute(
-    "aria-label",
-    `Switch to ${isDark ? "light" : "dark"} theme`,
-  );
-  themeLabel.textContent = isDark ? "Light" : "Dark";
-  themeIcon.textContent = isDark ? "☀" : "◐";
-}
-
-applyTheme(chosenTheme || (systemTheme.matches ? "dark" : "light"));
-themeToggle.hidden = false;
-themeToggle.addEventListener("click", () => {
-  chosenTheme = root.dataset.theme === "dark" ? "light" : "dark";
-  applyTheme(chosenTheme);
-  try {
-    localStorage.setItem("portfolio-theme", chosenTheme);
-  } catch {
-    /* Optional persistence. */
+  if (isDark) {
+    themeButton.textContent = "Switch to light theme";
+  } else {
+    themeButton.textContent = "Switch to dark theme";
   }
 });
-systemTheme.addEventListener("change", (event) => {
-  if (!chosenTheme) applyTheme(event.matches ? "dark" : "light");
-});
 
-function updateGreeting() {
-  const now = new Date();
-  const hour = now.getHours();
-  const greeting =
-    hour < 12 ? "Good Morning" : hour < 18 ? "Good Afternoon" : "Good Evening";
-  document.querySelector("#greeting").textContent =
-    `${greeting}, welcome to my corner of the web.`;
-  document.querySelector("#year").textContent = now.getFullYear();
-}
-updateGreeting();
-window.setInterval(updateGreeting, 60_000);
+// Display a greeting using the visitor's current hour.
+function showGreeting() {
+  const hour = new Date().getHours();
+  const greeting = document.getElementById("greeting");
 
-const welcomeButton = document.querySelector("#welcome-button");
-welcomeButton.hidden = false;
-welcomeButton.addEventListener("click", () => {
-  document.querySelector("#welcome-message").textContent =
-    "Welcome! Thanks for stopping by. Explore my projects, or head to Contact to connect.";
-});
-
-const contactForm = document.querySelector("#contact-form");
-const submitButton = document.querySelector("#submit-button");
-const formStatus = document.querySelector("#form-status");
-const fields = [
-  {
-    input: document.querySelector("#full-name"),
-    error: document.querySelector("#name-error"),
-    label: "your full name",
-  },
-  {
-    input: document.querySelector("#email"),
-    error: document.querySelector("#email-error"),
-    label: "your email address",
-  },
-  {
-    input: document.querySelector("#message"),
-    error: document.querySelector("#message-error"),
-    label: "a message",
-  },
-];
-let hasSubmitted = false;
-let lastValidatedValues = null;
-submitButton.disabled = false;
-
-function validateField(field) {
-  const value = field.input.value.trim();
-  let error = "";
-  if (!value) error = `Please enter ${field.label}.`;
-  else if (
-    field.input.type === "email" &&
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-  ) {
-    error = "Enter a valid email address, such as you@example.com.";
+  if (hour < 12) {
+    greeting.textContent = "Good Morning!";
+  } else if (hour < 18) {
+    greeting.textContent = "Good Afternoon!";
+  } else {
+    greeting.textContent = "Good Evening!";
   }
-  field.error.textContent = error;
-  field.input.setAttribute("aria-invalid", String(Boolean(error)));
-  return !error;
 }
 
-contactForm.addEventListener("submit", (event) => {
+showGreeting();
+
+document.getElementById("welcome-button").addEventListener("click", function () {
+  document.getElementById("welcome-message").textContent =
+    "Welcome! Thank you for visiting my portfolio.";
+});
+
+// Check each contact field when the form is submitted.
+const form = document.getElementById("contact-form");
+const nameInput = document.getElementById("full-name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const formStatus = document.getElementById("form-status");
+
+function showError(input, errorId, message) {
+  document.getElementById(errorId).textContent = message;
+  input.setAttribute("aria-invalid", message !== "");
+}
+
+form.addEventListener("submit", function (event) {
   event.preventDefault();
-  hasSubmitted = true;
-  const results = fields.map(validateField);
-  if (results.includes(false)) {
-    formStatus.dataset.state = "error";
-    formStatus.textContent =
-      "Please correct the highlighted fields. Your message has not been sent.";
-    fields[results.indexOf(false)].input.focus();
-    lastValidatedValues = null;
-    return;
+  let isValid = true;
+
+  showError(nameInput, "name-error", "");
+  showError(emailInput, "email-error", "");
+  showError(messageInput, "message-error", "");
+  formStatus.textContent = "";
+
+  if (nameInput.value.trim() === "") {
+    showError(nameInput, "name-error", "Please enter your full name.");
+    isValid = false;
   }
 
-  const values = JSON.stringify(fields.map(({ input }) => input.value.trim()));
-  formStatus.dataset.state = "success";
-  // Repeated submissions produce one clear status, never duplicate content.
-  formStatus.textContent =
-    values === lastValidatedValues
-      ? "This message is already validated. No email has been sent; use the email link to contact me."
-      : "Success! Your message passed validation. This is a demo, so no email was sent. Use the email link to contact me.";
-  lastValidatedValues = values;
+  // Require text before and after @, followed by a dot and a domain ending.
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailInput.value.trim() === "") {
+    showError(emailInput, "email-error", "Please enter your email address.");
+    isValid = false;
+  } else if (!emailPattern.test(emailInput.value.trim())) {
+    showError(emailInput, "email-error", "Please enter a valid email, such as name@example.com.");
+    isValid = false;
+  }
+
+  if (messageInput.value.trim() === "") {
+    showError(messageInput, "message-error", "Please enter a message.");
+    isValid = false;
+  }
+
+  if (isValid) {
+    // Replace the same message on every click, avoiding duplicate feedback.
+    formStatus.textContent = "Success! Your details are valid. This is a demo; no message was sent.";
+  } else {
+    formStatus.textContent = "Please correct the errors above.";
+    form.querySelector('[aria-invalid="true"]').focus();
+  }
 });
 
-fields.forEach((field) => {
-  field.input.addEventListener("input", () => {
-    if (hasSubmitted) validateField(field);
-    formStatus.textContent = "";
-    lastValidatedValues = null;
-  });
+// Remove old success feedback when the visitor changes the form.
+form.addEventListener("input", function () {
+  formStatus.textContent = "";
 });
-
-// Native anchor links remain functional without JavaScript.
-if ("IntersectionObserver" in window) {
-  const navLinks = [...document.querySelectorAll("nav a")];
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach((link) => {
-          if (link.hash === `#${entry.target.id}`)
-            link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
-        });
-      });
-    },
-    { rootMargin: "-20% 0px -60% 0px", threshold: 0 },
-  );
-  document
-    .querySelectorAll("main section[id]")
-    .forEach((section) => observer.observe(section));
-}
