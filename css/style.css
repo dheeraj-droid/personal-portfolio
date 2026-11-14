@@ -338,17 +338,6 @@ textarea {
   outline-color: #000000;
 }
 
-footer {
-  padding: 28px 6%;
-  border-top: 1px solid currentColor;
-  text-align: center;
-  font-size: 12px;
-}
-
-footer p {
-  margin: 0;
-}
-
 /* The required dark theme reverses black and white. */
 body.dark-theme {
   color: #ffffff;

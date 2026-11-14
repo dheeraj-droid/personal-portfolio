@@ -4,7 +4,7 @@ A basic portfolio for Badveli Dheeraj Reddy, built for the HTML, CSS, and JavaSc
 
 ## Features
 
-- Home, About, Skills, Projects, Contact, and a footer.
+- Home, About, Skills, Projects, and Contact sections.
 - Six skills and four projects from my resume.
 - Navigation links highlight the current section.
 - Light and dark theme toggle.
