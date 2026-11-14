@@ -106,12 +106,12 @@ form.addEventListener("submit", function (event) {
     isValid = false;
   }
 
-  // Require text before and after @, followed by a dot and a domain ending.
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Domain labels must be nonempty, so consecutive dots are rejected.
+  const emailPattern = /^[^\s@]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
   if (emailInput.value.trim() === "") {
     showError(emailInput, "email-error", "Please enter your email address.");
     isValid = false;
-  } else if (!emailPattern.test(emailInput.value.trim())) {
+  } else if (!emailPattern.test(emailInput.value.trim()) || !emailInput.validity.valid) {
     showError(emailInput, "email-error", "Please enter a valid email, such as name@example.com.");
     isValid = false;
   }
