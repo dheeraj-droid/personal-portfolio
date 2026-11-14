@@ -23,7 +23,7 @@ The following are polished examples that summarize the requests made during deve
 
 ## Generated code and review
 
-I used AI to assist with the HTML, CSS, and JavaScript. I read and reviewed each part of the generated code as the portfolio was developed, assessed whether it met the assignment requirements, and suggested changes based on that review. I kept the code I found appropriate and moved forward with it. For example, I requested a simpler layout and the removal of decorative elements and saved theme preferences.
+I used AI to assist with the HTML, CSS, and JavaScript. I read and reviewed each part of the generated code as the portfolio was developed, assessed whether it met the assignment requirements, and suggested changes based on that review. I kept the code I found appropriate and moved forward with it. For example, I made a simpler layout, removing decorative elements and saved theme preferences.
 
 I also completed the manual browser checks and found the results satisfactory. Codex performed the automated checks described below.
 
