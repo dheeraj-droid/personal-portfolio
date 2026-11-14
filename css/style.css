@@ -41,6 +41,11 @@ h1 {
   font-weight: 400;
 }
 
+/* Sans-serif for identity and navigation; serif for editorial text. */
+h1, #home h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
 header p {
   grid-column: 1;
   margin: 6px 0 0;
@@ -159,6 +164,17 @@ p {
 
 #home p {
   max-width: 620px;
+}
+
+#home p:not(#greeting), #about p, .project-card p:not(.placeholder) {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+#greeting, .placeholder {
+  font-family: Consolas, "Courier New", monospace;
+  letter-spacing: 0.02em;
 }
 
 #greeting {
