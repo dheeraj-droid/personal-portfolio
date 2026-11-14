@@ -29,7 +29,7 @@ I also completed the manual browser checks and found the results satisfactory. C
 
 ## Issues and corrections
 
-During my manual testing, I identified issues including the main heading wrapping despite available space and the active navigation indicator not working properly. I corrected these issues. I also reviewed the design and requested a simpler layout. During a later code audit, an unnecessary CSS import, a button hover visibility issue, redundant CSS, and an outdated comment were identified and corrected with AI assistance.
+During my manual testing, I identified issues including the main heading wrapping despite available space and the active navigation indicator not working properly. I corrected these issues. I also reviewed the design and made a simpler layout. During a later code audit, an unnecessary CSS import, a button hover visibility issue, redundant CSS, and an outdated comment were identified and corrected with AI assistance.
 
 ## Testing and verification
 
