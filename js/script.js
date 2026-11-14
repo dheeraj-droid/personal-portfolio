@@ -7,9 +7,9 @@ themeButton.addEventListener("click", function () {
   themeButton.setAttribute("aria-pressed", isDark);
 
   if (isDark) {
-    themeButton.textContent = "Switch to light theme";
+    themeButton.setAttribute("aria-label", "Switch to light theme");
   } else {
-    themeButton.textContent = "Switch to dark theme";
+    themeButton.setAttribute("aria-label", "Switch to dark theme");
   }
 });
 
