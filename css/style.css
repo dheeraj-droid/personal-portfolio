@@ -30,14 +30,15 @@ header .container {
 }
 
 h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
   line-height: 1.2;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
 }
 
 h1 {
   margin: 0;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 header p {
@@ -153,7 +154,7 @@ p {
   max-width: 800px;
   font-size: 76px;
   font-weight: 500;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
 }
 
 #home p {
@@ -218,8 +219,8 @@ p {
 
 .project-card .placeholder {
   margin: 0;
+  font-family: Consolas, "Courier New", monospace;
   font-size: 13px;
-  font-style: italic;
 }
 
 /* Contact text beside a simple form with underlined fields. */
