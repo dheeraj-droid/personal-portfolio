@@ -23,9 +23,9 @@ The following are polished examples that summarize the requests made during deve
 
 ## Generated code and review
 
-AI generated most of the HTML, CSS, and JavaScript used in the portfolio. The generated code was revised during development to match the requested design and assignment requirements. The earlier, more elaborate design was replaced with a simpler layout; decorative elements and saved theme preferences were removed.
+AI assisted in developing the HTML, CSS, and JavaScript. The code and suggestions were reviewed and refined during development to match the requested design and assignment requirements. For example, the earlier, more elaborate design was replaced with a simpler layout, and decorative elements and saved theme preferences were removed.
 
-AI-generated suggestions and code should be reviewed by the student before submission. The checks described below were performed by Codex; they do not imply that the student has independently reviewed every line.
+Codex inspected the code and performed the checks described below. The student should also review the final code and complete the manual browser checklist before submission.
 
 ## Issues and corrections
 
