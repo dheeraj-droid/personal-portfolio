@@ -10,7 +10,8 @@ A basic portfolio for Badveli Dheeraj Reddy, built for the HTML, CSS, and JavaSc
 - Light and dark theme toggle.
 - Welcome button and a greeting based on the current time.
 - Contact form with required-field and email validation.
-- Responsive layout for mobile, tablet, and desktop.
+- Responsive Grid and Flexbox layouts for mobile, tablet, and desktop.
+- Warm ivory, plum, and coral colors, with coordinated light and dark themes.
 
 ## Technologies
 
