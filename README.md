@@ -11,7 +11,7 @@ A basic portfolio for Badveli Dheeraj Reddy, built for the HTML, CSS, and JavaSc
 - Welcome button and a greeting based on the current time.
 - Contact form with required-field and email validation.
 - Responsive Grid and Flexbox layouts for mobile, tablet, and desktop.
-- Minimal black-and-white styling, open sections, and thin dividers. Dark theme reverses black and white.
+- Minimal black-and-white styling with open sections. Dark theme reverses black and white.
 
 ## Technologies
 

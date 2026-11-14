@@ -1,4 +1,4 @@
-/* Monochrome styling: open space, type, and thin dividing lines. */
+/* Monochrome styling with open space and typography. */
 * {
   box-sizing: border-box;
 }
@@ -19,7 +19,6 @@ body {
 
 header {
   padding: 22px 0;
-  border-bottom: 1px solid currentColor;
 }
 
 header .container {
@@ -62,7 +61,7 @@ nav {
 
 a {
   color: inherit;
-  text-underline-offset: 5px;
+  text-decoration: none;
   overflow-wrap: anywhere;
 }
 
@@ -70,23 +69,22 @@ nav a {
   padding: 10px 4px;
   font-size: 13px;
   text-decoration: none;
-  text-underline-offset: 6px;
 }
 
 nav a:hover, nav a:focus-visible, nav a[aria-current="location"] {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 button, .button {
   display: inline-block;
   padding: 13px 22px;
-  border: 1px solid currentColor;
+  border: 0;
   border-radius: 0;
   color: #ffffff;
   background-color: #000000;
@@ -100,22 +98,19 @@ button, .button {
 button:hover, .button:hover {
   color: #000000;
   background-color: #ffffff;
-  border-color: #000000;
   text-decoration: none;
 }
 
 #theme-toggle {
   padding: 12px 0;
   border: 0;
-  border-bottom: 1px solid currentColor;
   color: inherit;
   background-color: transparent;
   font-weight: 400;
 }
 
 #theme-toggle:hover {
-  border-bottom-width: 3px;
-  padding-bottom: 10px;
+  opacity: 0.65;
 }
 
 #theme-toggle {
@@ -170,8 +165,6 @@ p {
 
 #home {
   padding: 90px 0 80px;
-  border-bottom: 1px solid transparent;
-  border-image: linear-gradient(to right, transparent, #a8a8a8, transparent) 1;
 }
 
 #home h2 {
@@ -208,7 +201,7 @@ p {
 #welcome-button {
   color: inherit;
   background-color: transparent;
-  border-color: currentColor;
+  font-weight: 600;
 }
 
 #welcome-button:hover {
@@ -233,15 +226,9 @@ p {
 
 .skills-list li {
   padding: 8px 0;
-  border-bottom: 1px solid currentColor;
 }
 
 /* Projects are open text rows rather than boxed cards. */
-#projects {
-  border-top: 1px solid transparent;
-  border-image: linear-gradient(to right, transparent, #a8a8a8, transparent) 1;
-}
-
 .project-list {
   display: flex;
   flex-direction: column;
@@ -252,8 +239,6 @@ p {
   grid-template-columns: 1fr 1.5fr;
   column-gap: 64px;
   padding: 32px 0;
-  border-top: 1px solid transparent;
-  border-image: linear-gradient(to right, transparent, #bdbdbd, transparent) 1;
 }
 
 .project-card h3 {
@@ -271,13 +256,11 @@ p {
   font-size: 13px;
 }
 
-/* Contact text beside a simple form with underlined fields. */
+/* Contact text beside a simple form. */
 #contact {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 80px;
-  border-top: 1px solid transparent;
-  border-image: linear-gradient(to right, transparent, #a8a8a8, transparent) 1;
 }
 
 .contact-intro p {
@@ -299,12 +282,11 @@ label {
 
 input, textarea {
   width: 100%;
-  padding: 10px 0;
+  padding: 12px;
   border: 0;
-  border-bottom: 1px solid currentColor;
   border-radius: 0;
   color: inherit;
-  background-color: transparent;
+  background-color: #f2f2f2;
   font: inherit;
 }
 
@@ -319,9 +301,9 @@ textarea {
   font-weight: 600;
 }
 
-/* Errors use text and a heavier line, without relying on color. */
+/* Error messages explain invalid fields in text. */
 [aria-invalid="true"] {
-  border-bottom-width: 3px;
+  font-weight: 600;
 }
 
 #form-status {
@@ -344,6 +326,10 @@ body.dark-theme {
   background-color: #000000;
 }
 
+.dark-theme input, .dark-theme textarea {
+  background-color: #262626;
+}
+
 .dark-theme button, .dark-theme .button {
   color: #000000;
   background-color: #ffffff;
@@ -352,7 +338,6 @@ body.dark-theme {
 .dark-theme button:hover, .dark-theme .button:hover {
   color: #ffffff;
   background-color: #000000;
-  border-color: #ffffff;
 }
 
 .dark-theme #theme-toggle {
