@@ -31,6 +31,8 @@ This report does not claim that the user independently reviewed every generated 
 
 The main issue was scope: the first version went beyond the needs of basic training. The implementation was rewritten to match the assignment more closely. An unnecessary empty CSS import in the initial version was also removed during development.
 
+During the final audit, Codex found that the primary button hover colors could make the buttons blend into the page. The hover colors were corrected, duplicate CSS was removed, and an outdated navigation comment was updated.
+
 ## Verification
 
 Codex checked JavaScript syntax and used Playwright with installed Microsoft Edge to exercise navigation, welcome feedback, all three greeting branches, both themes, invalid and valid form input, and repeated submissions. Responsive checks covered 320, 375, 768, and 1440 pixels. Screenshots of the simplified layout were reviewed locally.

@@ -29,7 +29,7 @@ function showGreeting() {
 
 showGreeting();
 
-// Keep the underline on the section the visitor is viewing.
+// Highlight the section the visitor is viewing.
 const navigationLinks = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("main section[id]");
 let currentSection = "home";
