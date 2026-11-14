@@ -44,6 +44,6 @@ The student completed the manual checks and confirmed that the results were sati
 
 ## Limitations
 
-The contact form validates details locally but does not send messages. Project names link to GitHub searches, not verified repositories for these specific projects. The theme resets to light when the page is reloaded.
+The contact form validates details locally but does not send messages. Project links use expected repository names and may not lead to existing repositories. The theme resets to light when the page is reloaded.
 
 The simplified version was checked in Microsoft Edge using automated browser interactions and viewport sizes of 320, 375, 480, 768, 820, 1024, and 1440 pixels. Screenshots were reviewed locally. Other browsers and real mobile devices have not been tested.
