@@ -47,4 +47,4 @@ The user requested a minimal black-and-white design without boxes and asked abou
 
 ## Content and navigation update
 
-At the user's request, Codex added two more resume projects, updated the skills list, included technology names in the project descriptions, added current-section navigation, and changed the required-field indicators and Welcome button styling. The user later requested removing the footer, although the assignment requires one.
+At the user's request, Codex added two more resume projects, updated the skills list, included technology names in the project descriptions, added current-section navigation, and changed the required-field indicators and Welcome button styling. The user later requested removing the footer, then asked to restore it to meet the assignment requirement.
