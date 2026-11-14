@@ -67,18 +67,15 @@ a {
 }
 
 nav a {
-  padding: 10px 12px;
-  border-radius: 5px;
-  background-color: #f7f7f7;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  padding: 10px 4px;
   font-size: 13px;
   text-decoration: none;
+  text-underline-offset: 6px;
 }
 
 nav a:hover, nav a:focus-visible {
-  background-color: #ececec;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 a:hover {
@@ -341,16 +338,6 @@ footer p {
 body.dark-theme {
   color: #ffffff;
   background-color: #000000;
-}
-
-.dark-theme nav a {
-  background-color: #1d1d1d;
-  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.18);
-}
-
-.dark-theme nav a:hover, .dark-theme nav a:focus-visible {
-  background-color: #333333;
-  box-shadow: 0 2px 7px rgba(255, 255, 255, 0.25);
 }
 
 .dark-theme button, .dark-theme .button {
