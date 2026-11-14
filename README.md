@@ -11,7 +11,7 @@ A basic portfolio for Badveli Dheeraj Reddy, built for the HTML, CSS, and JavaSc
 - Welcome button and a greeting based on the current time.
 - Contact form with required-field and email validation.
 - Responsive Grid and Flexbox layouts for mobile, tablet, and desktop.
-- Warm ivory, plum, and coral colors, with coordinated light and dark themes.
+- Minimal black-and-white styling, open sections, and thin dividers. Dark theme reverses black and white.
 
 ## Technologies
 
@@ -44,4 +44,4 @@ Download or clone this repository, then open `index.html` in a browser.
 
 The contact form validates details locally but does not send messages. Project links are labelled placeholders, as requested. The theme resets to light when the page is reloaded.
 
-The simplified version was checked in Microsoft Edge using automated browser interactions and viewport sizes of 320, 375, 768, and 1440 pixels. Screenshots were reviewed locally. Other browsers and real mobile devices have not been tested.
+The simplified version was checked in Microsoft Edge using automated browser interactions and viewport sizes of 320, 375, 480, 768, 820, 1024, and 1440 pixels. Screenshots were reviewed locally. Other browsers and real mobile devices have not been tested.
