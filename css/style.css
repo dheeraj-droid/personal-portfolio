@@ -228,6 +228,10 @@ p {
   padding: 8px 0;
 }
 
+.skills-list li + li {
+  border-top: 1px solid currentColor;
+}
+
 /* Projects are open text rows rather than boxed cards. */
 .project-list {
   display: flex;
