@@ -23,9 +23,9 @@ The following are polished examples that summarize the requests made during deve
 
 ## Generated code and review
 
-AI assisted in developing the HTML, CSS, and JavaScript. The code and suggestions were reviewed and refined during development to match the requested design and assignment requirements. For example, the earlier, more elaborate design was replaced with a simpler layout, and decorative elements and saved theme preferences were removed.
+I used AI to assist with the HTML, CSS, and JavaScript. I read and reviewed each part of the generated code as the portfolio was developed, assessed whether it met the assignment requirements, and suggested changes based on that review. I kept the code I found appropriate and moved forward with it. For example, I requested a simpler layout and the removal of decorative elements and saved theme preferences.
 
-Codex inspected the code and performed the automated checks described below. The student also completed the manual checks and confirmed that the results were satisfactory.
+I also completed the manual browser checks and found the results satisfactory. Codex performed the automated checks described below.
 
 ## Issues and corrections
 
@@ -35,4 +35,4 @@ The initial design was more elaborate than requested, so it was simplified. An u
 
 Codex checked JavaScript syntax and used automated Playwright tests in Microsoft Edge to verify navigation, the welcome message, all three greeting branches, theme switching, form validation, repeated submissions, keyboard focus, and the absence of horizontal overflow at mobile, tablet, and desktop widths. The footer and button hover visibility in both themes were also checked. Screenshots were reviewed locally.
 
-The student completed the manual browser checks and confirmed that everything worked as expected. The checklist is included in the README. Project details were taken from the supplied resume; the portfolio does not independently verify project performance claims.
+I completed the manual browser checks and confirmed that everything worked as expected. The checklist is included in the README. Project details were taken from the supplied resume; the portfolio does not independently verify project performance claims.
